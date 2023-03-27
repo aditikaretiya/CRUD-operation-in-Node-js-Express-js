@@ -1,0 +1,32 @@
+<html>
+<body>
+    <%- include('menu-subcategory');%>
+<table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category ID</th>
+            <th>Action</th>
+        </tr>
+        <% for(var i=0;i<mydata.length;i++){ %>
+        <tr>
+            <td>
+                <%=mydata[i].subcg_id %>
+            </td>
+            <td>
+                <%=mydata[i].subcg_name %>
+            </td>
+            <td>
+                <%=mydata[i].subcg_categoryid %>
+            </td>
+            
+            
+            <td>
+                <a href='/subcg-edit/<%= mydata[i].subcg_id %>'>Edit</a> |
+                <a href='/subcg-delete/<%= mydata[i].subcg_id %>'>Delete</a>
+            </td>
+        </tr>
+        <%}%>
+</table>
+</body>
+</html>

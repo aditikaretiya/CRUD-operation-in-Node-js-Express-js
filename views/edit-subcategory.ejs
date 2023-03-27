@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <%- include('menu-subcategory');%>
+        <form method="post" action="/subcg-updateprocess/<%= mydata[0].subcg_id %>">
+            Name : <input type="text" name="txt1" value="<%= mydata[0].subcg_name %>" required /><br>
+            Category ID : <input type="text" name="txt2" value="<%= mydata[0].subcg_categoryid %>" required /><br>
+            
+            
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <%- include('menu-product');%>
+        <form method="post" action="/pro-updateprocess/<%= mydata[0].pro_id %>">
+            Name : <input type="text" name="txt1" value="<%= mydata[0].pro_name %>" required /><br>
+            Details : <input type="text" name="txt2" value="<%= mydata[0].pro_details %>" required /><br>
+            Price : <input type="text" name="txt3" value="<%= mydata[0].pro_price %>" required /><br>
+            Image : <input type="text" name="txt4" value="<%= mydata[0].pro_image %>" required /><br>
+      
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

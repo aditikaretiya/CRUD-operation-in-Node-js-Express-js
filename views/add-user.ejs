@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <%- include('menu-user');%>
+        <form method="post" action="/userprocess">
+            Name : <input type="text" name="txt1" required/><br>
+            Gender : <select name="txt2">
+                <option>Male</option>
+                <option>Female</option>
+            </select><br>
+            Email : <input type="text" name="txt3" required/><br>
+            Password : <input type="text" name="txt4" required/><br>
+            
+            Mobile : <input type="text" name="txt5" required/><br>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

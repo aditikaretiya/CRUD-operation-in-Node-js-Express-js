@@ -1,0 +1,39 @@
+<html>
+<body>
+    <%- include('menu-product'); %>
+<table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        <% for(var i=0;i<mydata.length;i++){ %>
+        <tr>
+            <td>
+                <%=mydata[i].pro_id %>
+            </td>
+            <td>
+                <%=mydata[i].pro_name %>
+            </td>
+            <td>
+                <%=mydata[i].pro_details %>
+            </td>
+            <td>
+                <%=mydata[i].pro_price %>
+            </td>
+            <td>
+                <%=mydata[i].pro_image %>
+            </td>
+            
+            <td>
+                <a href='/pro-edit/<%= mydata[i].pro_id %>'>Edit</a> |
+                <a href='/pro-delete/<%= mydata[i].pro_id %>'>Delete</a>
+            </td>
+        </tr>
+        <%}%>
+</table>
+</body>
+</html>

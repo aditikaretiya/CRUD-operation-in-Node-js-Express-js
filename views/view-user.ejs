@@ -1,0 +1,44 @@
+<html>
+<body>
+    <%- include('menu-user');%>
+<table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Password</th>
+            
+            <th>Mobile</th>
+            <th>Action</th>
+        </tr>
+        <% for(var i=0;i<mydata.length;i++){ %>
+        <tr>
+            <td>
+                <%=mydata[i].user_id %>
+            </td>
+            <td>
+                <%=mydata[i].user_name %>
+            </td>
+            <td>
+                <%=mydata[i].user_gender %>
+            </td>
+            <td>
+                <%=mydata[i].user_email %>
+            </td>
+            <td>
+                <%=mydata[i].user_password %>
+            </td>
+            
+            <td>
+                <%=mydata[i].user_mobile %>
+            </td>
+            <td>
+                <a href='/user-edit/<%= mydata[i].user_id %>'>Edit</a> |
+                <a href='/user-delete/<%= mydata[i].user_id %>'>Delete</a>
+            </td>
+        </tr>
+        <%}%>
+</table>
+</body>
+</html>

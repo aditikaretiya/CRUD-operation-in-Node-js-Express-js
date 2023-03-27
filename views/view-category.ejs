@@ -1,0 +1,29 @@
+<html>
+<body>
+    <%- include('menu-category');%>
+<table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            
+            <th>Action</th>
+        </tr>
+        <% for(var i=0;i<mydata.length;i++){ %>
+        <tr>
+            <td>
+                <%=mydata[i].cg_id %>
+            </td>
+            <td>
+                <%=mydata[i].cg_name %>
+            </td>
+            
+            
+            <td>
+                <a href='/cg-edit/<%= mydata[i].cg_id %>'>Edit</a> |
+                <a href='/cg-delete/<%= mydata[i].cg_id %>'>Delete</a>
+            </td>
+        </tr>
+        <%}%>
+</table>
+</body>
+</html>
